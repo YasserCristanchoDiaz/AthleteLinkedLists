@@ -54,6 +54,28 @@ void LinkedList<T>::addNodeLast( T info ) {
 }
 
 template<class T>
+Node<T> *LinkedList<T>::findNode(std::string id) {
+    Node<T> *aux = head;
+    while (aux != NULL) {
+        if ((id.compare(aux->info.getId()) == 0)) return aux;
+        aux = aux->next;
+    }
+
+    return NULL;
+}
+
+template<class T>
+T *LinkedList<T>::findInfo(std::string id) {
+    Node<T> *aux = head;
+    while (aux != NULL) {
+        if ((id.compare(aux->info.getId()) == 0)) return &aux->info;
+        aux = aux->next;
+    }
+
+    return NULL;
+}
+
+template<class T>
 LinkedList<T>::~LinkedList() {
     Node<T>* aux;
     while( head != NULL ){

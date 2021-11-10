@@ -4,6 +4,7 @@
 
 #include "Node.h"
 #include <vector>
+#include <string>
 
 template <class T>
 class LinkedList {
@@ -16,6 +17,10 @@ public:
     void addNodeFirst( T );
 
     void addNodeLast( T );
+
+    Node<T> *findNode(std::string);
+
+    T *findInfo(std::string);
 
     std::vector<T> getLinkedList();
 

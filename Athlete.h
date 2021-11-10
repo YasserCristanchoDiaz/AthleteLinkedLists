@@ -5,7 +5,7 @@
 #ifndef ATHLETELINKEDLISTS_ATHLETE_H
 #define ATHLETELINKEDLISTS_ATHLETE_H
 
-#include <String>
+#include <string>
 #include <ostream>
 
 class Athlete {
